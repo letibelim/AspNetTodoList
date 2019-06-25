@@ -2,3 +2,7 @@
 .vs
 # Local Settings files
 AspNetCoreTodo/appsettings.development.json
+
+# Debug and build
+AspNetCoreTodo/obj
+AspNetCoreTodo/bin
