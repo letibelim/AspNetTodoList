@@ -1,0 +1,4 @@
+#IDE Files
+.vs
+# Local Settings files
+AspNetCoreTodo/appsettings.development.json

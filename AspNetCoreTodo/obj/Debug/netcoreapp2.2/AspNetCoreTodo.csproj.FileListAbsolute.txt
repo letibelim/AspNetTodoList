@@ -1,0 +1,3 @@
+C:\projects\dotnet\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp2.2\AspNetCoreTodo.csproj.CoreCompileInputs.cache
+C:\projects\dotnet\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp2.2\AspNetCoreTodo.AssemblyInfoInputs.cache
+C:\projects\dotnet\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp2.2\AspNetCoreTodo.AssemblyInfo.cs
