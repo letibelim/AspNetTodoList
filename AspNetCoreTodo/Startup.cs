@@ -46,7 +46,7 @@ namespace AspNetCoreTodo
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // My services
-            services.AddSingleton<ITodoItemService, FakeTodoService>();
+            services.AddScoped<ITodoItemService, TodoItemService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
