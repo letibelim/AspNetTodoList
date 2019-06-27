@@ -4,8 +4,8 @@
     ViewData["Title"] = "Manage your todo list";
 }
 
-<div class="panel panel-default todo-panel">
-    <div class="panel-heading">@ViewData["Title"]</div>
+<div class="card todo-panel">
+    <div class="card-header">@ViewData["Title"]</div>
 
     <table class="table table-hover">
         <thead>
@@ -31,7 +31,7 @@
         }
     </table>
 
-    <div class="panel-footer add-item-form">
+    <div class="card-footer add-item-form">
         @await Html.PartialAsync("AddItemPartial", new TodoItem() { Title = "new Task" })
     </div>
 </div>

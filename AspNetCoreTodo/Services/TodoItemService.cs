@@ -17,10 +17,11 @@ namespace AspNetCoreTodo.Services
             _context = context;
         }
 
-        public async Task<bool> AddItemAsync(TodoItem todoItem)
+        public async Task<bool> AddItemAsync(TodoItem todoItem, Microsoft.AspNetCore.Identity.IdentityUser currentUser)
         {
             todoItem.Id = Guid.NewGuid();
             todoItem.IsDone = false;
+            todoItem.UserId = currentUser.Id;
             todoItem.DueAt = DateTime.Now.AddDays(3);
 
             _context.Items.Add(todoItem);
@@ -29,16 +30,19 @@ namespace AspNetCoreTodo.Services
             return saveResult == 1;
         }
 
-        public async Task<TodoItem[]> GetIncompleteItemsAsync()
+        public async Task<TodoItem[]> GetIncompleteItemsAsync(Microsoft.AspNetCore.Identity.IdentityUser currentUser)
         {
             return await _context.Items
-                .Where(x => x.IsDone == false)
+                .Where(x => x.IsDone == false && x.UserId == currentUser.Id)
                 .ToArrayAsync();
         }
 
-        public async Task<bool> MarkDoneAsync(Guid id)
+        public async Task<bool> MarkDoneAsync(Guid id, Microsoft.AspNetCore.Identity.IdentityUser currentUser)
         {
-            var todoItem = await _context.FindAsync<TodoItem>(id);
+            var todoItem = await _context.Items
+                .Where(x => x.Id == id && x.UserId == currentUser.Id)
+                .SingleOrDefaultAsync();
+                ;
             if( todoItem == null )
             {
                 return false;
