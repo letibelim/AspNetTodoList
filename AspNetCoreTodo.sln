@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreTodo", "AspNetCoreTodo\AspNetCoreTodo.csproj", "{DAF6AF72-10E2-48A9-AC0F-32F245CA06E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo", "AspNetCoreTodo\AspNetCoreTodo.csproj", "{DAF6AF72-10E2-48A9-AC0F-32F245CA06E3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C63EC848-BDEB-47A0-B50B-5BC6D62D5159}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo.UnitTest", "AspNetCoreTodo.UnitTest\AspNetCoreTodo.UnitTest.csproj", "{ED1F2C6C-93AE-4A3F-B702-4B888F932498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreTodo.IntegrationTests", "AspNetCoreTodo.IntegrationTests\AspNetCoreTodo.IntegrationTests.csproj", "{1503BE92-953B-4DE3-9EE9-8A87EC815F2B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DAF6AF72-10E2-48A9-AC0F-32F245CA06E3} = {DAF6AF72-10E2-48A9-AC0F-32F245CA06E3}
 	EndProjectSection
 EndProject
 Global
@@ -20,6 +27,14 @@ Global
 		{DAF6AF72-10E2-48A9-AC0F-32F245CA06E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAF6AF72-10E2-48A9-AC0F-32F245CA06E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAF6AF72-10E2-48A9-AC0F-32F245CA06E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1F2C6C-93AE-4A3F-B702-4B888F932498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1F2C6C-93AE-4A3F-B702-4B888F932498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1F2C6C-93AE-4A3F-B702-4B888F932498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1F2C6C-93AE-4A3F-B702-4B888F932498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1503BE92-953B-4DE3-9EE9-8A87EC815F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1503BE92-953B-4DE3-9EE9-8A87EC815F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1503BE92-953B-4DE3-9EE9-8A87EC815F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1503BE92-953B-4DE3-9EE9-8A87EC815F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
